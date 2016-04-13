@@ -1,0 +1,88 @@
+.condetail,
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-family: "微软雅黑";
+	font-size: 16px;
+}
+
+.condetail {
+	width: 1000px;
+	height: 450px;
+	margin-left: 200px;
+	margin-top: 10px;
+	border-left: 1px solid #E7E7E7;
+	border-right: 2px solid red;
+}
+
+.deimg {
+	width: 300px;
+	height: 400px;
+	float: left;
+}
+
+.deimg img {
+	width: inherit;
+	height: inherit;
+}
+
+.detail {
+	width: 400px;
+	height: 400px;
+	margin-left: 100px;
+	float: left;
+	/*background-color: red;*/
+}
+
+.detail ul {
+	width: 200px;
+	height: 400px;
+	text-align: center;
+	margin-top: 40px;
+}
+
+.detail li {
+	width: 200px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	margin-top: 15px;
+	margin-left: 100px;
+}
+
+.detail .bin {
+	width: 380px;
+	height: 50px;
+	margin-left: 10px;
+}
+
+.bin{
+	width: 380px;
+	height: 50px;
+	border: none;
+	background-color: #FF0033;
+	margin-top: 20px;
+	line-height: 50px;
+}
+
+.bin a {
+	/*background-color: #FF0033;*/
+	font-size: 24px;
+	color: #FFFFFF;
+	text-decoration: none;
+	margin-top: 20px;
+}
+
+.bin:hover {
+	background-color: #FF6666;
+}
+.p1{
+	color: #0099CC;
+}
+.p2{
+	color: #838B8B;
+}
+.p3{
+	color: red;
+}

@@ -1,0 +1,80 @@
+h3{
+	text-align: center;
+	/*height: 50px;*/
+}
+.login {
+	width: 1000px;
+	height: 500px;
+	margin: auto;
+	background-color: #fff;
+	border: 1px solid #e7e7e7;
+	border-top:1px solid #ff3c3c ;
+	/*text-align: center;*/
+}
+
+.login ul {
+	list-style: none;
+	margin-left: 350px;
+}
+
+.login li {
+	width: 240px;
+	height: 32px;
+	line-height: 32px;
+	margin-left: 10px;
+	border: 1px solid steelblue;
+	border-radius: 5px;
+	position: relative;
+	top: 100px;
+	margin-bottom: 20px;
+}
+
+li i {
+	position: absolute;
+	left: 8px;
+	top: 8px;
+}
+
+.login .conin {
+	height: 30px;
+	width: 100px;
+	border: 1px solid steelblue;
+	position: absolute;
+	top: -1px;
+}
+
+.login .it {
+	width: 200px;
+	right: -1px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.login .code{
+	width: 138px;
+	height: 30px;
+	position: absolute;
+	left: 120px;
+}
+.login .sh a{
+	height: 25px;
+	line-height: 25px;
+}
+.login .l{
+	width: 60px;
+	position: absolute;
+	top: 10px;
+	left: 40px;
+}
+.login .none {
+	border: none;
+	width: inherit;
+}
+
+.login .wm {
+	position: absolute;
+	top: 10px;
+	left: 150px;
+}
+.code #code{
+	cursor: pointer;
+}

@@ -1,0 +1,39 @@
+.editbook{
+	width: 500px;
+	height: auto;
+	margin: 40px auto;
+	border: 1px solid #E7E7E7;
+	border-top: 4px solid #FF0000;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.editbook ul{
+	width: inherit;
+	height: 500px;
+	list-style: none;
+	text-align: center;
+}
+.editbook li {
+	width: inherit;
+	height: 40px;
+	line-height: 50px;
+	word-spacing: 5px;
+}
+.editbook label{
+ letter-spacing: 5px;
+ margin-right: 10px;
+}
+.editbook .ls{
+	letter-spacing: 19px;
+}
+.editbook .lc{
+	letter-spacing: 10px;
+}
+.editbook input{
+	width: 160px;
+	height: 25px;
+}
+.editbook select{
+	width: 100px;
+	height: 25px;
+}

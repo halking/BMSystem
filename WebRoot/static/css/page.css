@@ -1,0 +1,42 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: "微软雅黑";
+	color: #000000;
+}
+.page{
+	width: 700px;
+	height: 40px;
+	border: 1px solid #CCCCCC;
+	border-top: 1px  solid red;
+	margin: 10px auto;
+	/*text-align: center;*/
+}
+.page .f1{
+	width: 200px;
+}
+.page ul{
+	list-style: none;
+	width: inherit;
+	height: inherit;
+	margin:0 auto;
+}
+.page li{
+	width: 50px;
+	/*background-color: #000000;*/
+	height: inherit;
+	float: left;
+	text-align: center;
+	line-height: 40px;
+}
+.page li i{
+	font-size: 26px;
+	font-weight: bold;
+}
+.page a{
+	text-decoration: none;
+}
+.page a:hover{
+	color: red;
+}
+

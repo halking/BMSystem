@@ -1,0 +1,27 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+table,tr,th,td{
+	font-family: '宋体';
+	border: 1px solid #e7e7e7;
+	border-collapse: collapse;
+	overflow: hidden;
+	color: #222222;
+}
+th{
+	background-color: #F6F5EC;
+	color: #222222;
+}
+th,td{
+	width: 116px;
+	height: 30px;
+	text-align: center;
+}
+.t1{
+	background-color:#e7F3F4;
+}
+tr i {
+	color: #3C3645;
+}

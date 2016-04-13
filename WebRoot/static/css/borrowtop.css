@@ -1,0 +1,41 @@
+*{
+	padding: 0;
+	margin: 0;
+    list-style: none;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    color: #000;	
+}
+.borrow{
+	width: 1060px;
+	height: 900px;
+	margin-left: 268px;
+	padding-left: 20px;
+	border-left: 1px solid #e7e7e7;
+}
+.borrow_list{
+	width: 212px;
+	height: 280px;
+	float: left;
+	margin-top: 10px;
+	/*border:  1px solid seagreen;*/
+}
+.borrow a{
+	text-decoration: none;
+}
+.borrow_list img{
+	width: 100px;
+	height: 133px;
+}
+.borrow_list p{
+	margin-left: 10px;
+}
+.p1{
+	color: #0099CC;
+}
+.p2{
+	color: #838B8B;
+}
+.p3{
+	color: red;
+}
