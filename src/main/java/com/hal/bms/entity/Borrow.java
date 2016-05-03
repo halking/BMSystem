@@ -1,6 +1,6 @@
 package com.hal.bms.entity;
 
-import java.sql.Timestamp;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -19,10 +19,10 @@ public class Borrow extends DataEntity<Borrow>{
 	private User user;
 	private Books books;
 	private String remark;
-	private Timestamp borrowdate;
-	private Timestamp returndate;
-	private Timestamp mustdate;
-	private Short payfine;
+	private Date borrowdate;
+	private Date returndate;
+	private Date mustdate;
+	private Double payfine;
 	private  Set<Historyborrow>  historyborrows = new HashSet<Historyborrow>();
 
 	// Constructors
@@ -41,8 +41,8 @@ public class Borrow extends DataEntity<Borrow>{
 	 * @param mustdate
 	 * @param payfine
 	 */
-	public Borrow(User user, Books books, String remark, Timestamp borrowdate,
-			Timestamp returndate, Timestamp mustdate, Short payfine) {
+	public Borrow(User user, Books books, String remark, Date borrowdate,
+			Date returndate, Date mustdate, Double payfine) {
 		this.user = user;
 		this.books = books;
 		this.remark = remark;
@@ -86,35 +86,35 @@ public class Borrow extends DataEntity<Borrow>{
 		this.remark = remark;
 	}
 
-	public Timestamp getBorrowdate() {
+	public Date getBorrowdate() {
 		return this.borrowdate;
 	}
 
-	public void setBorrowdate(Timestamp borrowdate) {
+	public void setBorrowdate(Date  borrowdate) {
 		this.borrowdate = borrowdate;
 	}
 
-	public Timestamp getReturndate() {
+	public Date  getReturndate() {
 		return this.returndate;
 	}
 
-	public void setReturndate(Timestamp returndate) {
+	public void setReturndate(Date  returndate) {
 		this.returndate = returndate;
 	}
 
-	public Timestamp getMustdate() {
+	public Date  getMustdate() {
 		return this.mustdate;
 	}
 
-	public void setMustdate(Timestamp mustdate) {
+	public void setMustdate(Date mustdate) {
 		this.mustdate = mustdate;
 	}
 
-	public Short getPayfine() {
+	public Double getPayfine() {
 		return this.payfine;
 	}
 
-	public void setPayfine(Short payfine) {
+	public void setPayfine(Double payfine) {
 		this.payfine = payfine;
 	}
 
@@ -125,8 +125,6 @@ public class Borrow extends DataEntity<Borrow>{
 	public Set<Historyborrow> getHistoryborrows() {
 		return historyborrows;
 	}
-
-
 	/**
 	 * @param historyborrows the historyborrows to set
 	 */

@@ -1,13 +1,14 @@
-/**
- * 
- */
+
 package com.hal.bms.dao;
 
 import java.util.List;
 
+import org.hibernate.FlushMode;
 import org.hibernate.Query;
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.hal.bms.commons.dao.BaseHibernateDAO;
 import com.hal.bms.entity.Category;
@@ -40,9 +41,10 @@ public class UserDao extends BaseHibernateDAO<User> {
 	 * @return
 	 */
 	@Override
-	public User get(User entity) {
+	public User get(Integer id) {
 		// TODO Auto-generated method stub
-		return null;
+		User user = (User)getSession().load(User.class, id);
+		return  user;
 	}
 
 	/*
@@ -202,6 +204,21 @@ public class UserDao extends BaseHibernateDAO<User> {
 	@Override
 	public List<User> getAll() {
 		// TODO Auto-generated method stub
-		return null;
+		String hql = "From User";
+		Query query = getSession().createQuery(hql);
+		List<User> list = query.list();
+		return list;
+	}
+	public  void  updateSelf(User user){
+	
+	 getSession().update(user);
+	 getSession().flush();
+	}
+	public  void updatepwd(User user){
+		String hql = "update User as u set u.password = :pwd where u.id = :id";
+		Query query =  exeQuery(hql);
+		query.setString("pwd", user.getPassword());
+		query.setInteger("id", user.getId());
+		query.executeUpdate();
 	}
 }

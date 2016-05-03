@@ -51,7 +51,7 @@
 					<div class="bg"></div>
 					<ul>
 						<li ><a href="${ctx}/books/booklist" target="smain">图书信息</a></li>
-						<li>已借图书</li>
+						<li><a href="${ctx}/book/getborrow" target="smain">已借图书</a></li>
 					    <li>新书上架</li>
 					</ul>
 				</li>
@@ -59,7 +59,7 @@
 					<p><i class="fa fa-user fa-fw"></i>用户管理</p>
 					<ul>
 						<li><a href="${ctx}/user/userlist" target="smain">用户信息</li>
-						<li>用户借书</li>
+						<li>借阅历史</li>
 					</ul>
 				</li>
 				<li>

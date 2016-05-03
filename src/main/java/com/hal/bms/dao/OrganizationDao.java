@@ -24,7 +24,7 @@ public class OrganizationDao extends BaseHibernateDAO<Organization> {
 	 *@return
 	 */
 	@Override
-	public Organization get(Organization entity) {
+	public Organization get(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

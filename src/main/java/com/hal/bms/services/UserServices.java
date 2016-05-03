@@ -31,6 +31,11 @@ public class UserServices  extends CrudServices<UserDao, User> {
 	public List<User> queryByPage(User entity, Page page) {
 		// TODO Auto-generated method stub
 		return null;
-	}
-                 
+	}      
+    public  void updateSelf(User user){
+    	dao.updateSelf(user);
+    }
+    public  void updatepwd(User user){
+    	dao.updatepwd(user);
+    }
 }

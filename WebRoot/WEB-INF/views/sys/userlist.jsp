@@ -43,7 +43,7 @@
 			<td>${user.category.categoryname}</td>
 			<td>
 			<a href="${ctx}/user/edit?id=${user.id}" title="修改读者信息"><i class="fa fa-edit fa-fw"></i></a>
-			<a href="${ctx}/user/del?id=${user.id}" title="删除读者信息"><i class="fa fa-remove fa-fw"></i></a>
+			<a href="${ctx}/user/del/${user.id}" title="删除读者信息"><i class="fa fa-remove fa-fw"></i></a>
 			</td>
 		</tr>
 		</c:forEach>

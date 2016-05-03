@@ -24,7 +24,7 @@ public class CategoryDao extends BaseHibernateDAO<Category> {
 	 *@return
 	 */
 	@Override
-	public Category get(Category entity) {
+	public Category get(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

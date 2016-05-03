@@ -21,7 +21,7 @@
 					<li><span class="p2">索书号：${book.callnum}</span></li>
 					<li><span class="p2">数量：${book.count}</span></li>
 					<li><span class="p3">剩余：${book.rest}</span></li>
-					<div class="bin"><a href="${ctx}/borrow?id=${book.id}">
+					<div class="bin"><a href="${ctx}/book/borrow/${book.id}" onclick="validatUser()">
 							借阅此书
 						</a></div>
 				</ul>
@@ -29,5 +29,11 @@
 		</div>
 		</c:forEach>
 	</body>
-
+   <script type="text/javascript">
+     function  validatUser(){
+        <c:if test="${user==null}" >
+           alert("您还没有登录，没有借阅权限！");
+        </c:if>
+     }
+   </script>
 </html>

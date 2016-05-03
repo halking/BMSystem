@@ -8,9 +8,14 @@ import java.io.IOException;
 //import java.util.Date;
 //import java.util.List;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.bind.ValidationException;
 //import javax.xml.validation.Validator;
+
+
 
 import org.hibernate.exception.ConstraintViolationException;
 import org.slf4j.Logger;
@@ -28,11 +33,11 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
  *
  */
 public abstract class BaseController {
-	/**
-	 * BaseController hal
-	 */
+   
 	protected Logger logger = LoggerFactory.getLogger(getClass());
-
+     
+	protected    String msg ="";
+	protected  List<String>   errors  = new ArrayList<String>();
 	/**
 	 * 添加Model消息
 	 * 
@@ -63,7 +68,7 @@ public abstract class BaseController {
 			message = message.replace("#", "");
 			sb.append(message).append(messages.length > 1 ? "<br/>" : "");
 		}
-		redirectAttributes.addFlashAttribute("message", sb.toString());
+		redirectAttributes.addFlashAttribute("msg", sb.toString());
 	}
 
 	/**

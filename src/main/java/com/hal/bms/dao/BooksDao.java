@@ -5,6 +5,7 @@ package com.hal.bms.dao;
 
 import java.util.List;
 
+import org.hibernate.FlushMode;
 import org.hibernate.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -25,6 +26,12 @@ public class BooksDao extends BaseHibernateDAO<Books> implements BaseDao<Books,P
 		IbaseDao<Books> {
 	@Autowired
 	TypeDao typedao;
+	
+	public  void updateEntity(Books books){
+		getSession().setFlushMode(FlushMode.AUTO);
+		  getSession().update(books);
+		  getSession().flush();
+	}
 	/* 
 	 *2016年4月6日
 	 * @see com.hal.bms.commons.dao.CrudDao#get(java.lang.Object)
@@ -32,9 +39,9 @@ public class BooksDao extends BaseHibernateDAO<Books> implements BaseDao<Books,P
 	 *@return
 	 */
 	@Override
-	public Books get(Books entity) {
+	public Books get(Integer id) {
 		// TODO Auto-generated method stub
-		return null;
+		return  (Books) getSession().load(Books.class, id);
 	}
 
 	/* 

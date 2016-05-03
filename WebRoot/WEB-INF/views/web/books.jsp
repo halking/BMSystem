@@ -11,22 +11,21 @@
 <link rel="stylesheet" type="text/css" href="${ctxcss}/borrowtop.css" />
 </head>
 <script type="text/javascript">
-/* 	function(){
-		var msg = "${msg}"
-		if (msg !== null) {
-			alert(msg);
-		}
-		console.log(msg);
-	} */
+ 	(function(){
+		<c:if test="${msg!=null}">
+			alert("${msg}");
+		</c:if>
+		}())
 </script>
 <body>
 	<div class="borrow">
-
+       	<c:if test="${errors != null }">
+       	 <c:forEach var="errors" items="${errors}">
+					<p>${errors}</p>
+		</c:forEach>
+		</c:if>
 		<c:forEach items="${book}" var="book">
 			<div id="" class="borrow_list">
-				<c:if test="${msg != null }">
-					<p>${msg}</p>
-				</c:if>
 				<a href="${ctx}/books/detail?id=${book.id}"><img src="${ctximg}/books/${book.img}" /></a> 
 				<a href="${ctx}/books/detail?id=${book.id}"><p class="p1">${book.bookname}</p></a>
 				<p>${book.author}</p>

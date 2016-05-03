@@ -24,7 +24,7 @@ public class RoleDao extends BaseHibernateDAO<Role> {
 	 *@return
 	 */
 	@Override
-	public Role get(Role entity) {
+	public Role get(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

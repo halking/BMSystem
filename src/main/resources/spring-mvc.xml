@@ -31,7 +31,7 @@
 	
 		<!-- 定义无需Controller的url<->view直接映射 -->
 	<mvc:view-controller path="/a" view-name="/web/index"/>
-	<mvc:view-controller path="/a/login" view-name="/web/login"/>
+<!-- 	<mvc:view-controller path="/a/login" view-name="/web/login"/> -->
 	<mvc:view-controller path="/s" view-name="/sys/system"/>
 	<!-- 多文件上传解析 -->
 	<bean id="multipartResolver"
@@ -42,7 +42,12 @@
 
 	<!-- 静态资源映射 -->
 	<mvc:resources location="/static/" mapping="/static/**" />
-
+     
+     <!-- 验证消息资源文件 -->
+     <bean id="messageSource" 
+     class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename"  value="classpath:messages"></property>
+     </bean>
     <!-- 控制器异常处理 -->
      <bean id="exceptionHandlerExceptionResolver"
 		class="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">

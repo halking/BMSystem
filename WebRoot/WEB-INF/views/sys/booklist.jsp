@@ -47,7 +47,7 @@
 				<td>${book.type.typename}</td>
 				<td>
 					<a href="${ctx}/books/edit?id=${book.id}" title="修改读者信息"><i class="fa fa-edit fa-fw"></i></a>
-					<a href="${ctx}/books/del?id=${book.id}" title="删除读者信息"><i class="fa fa-remove fa-fw"></i></a>
+					<a href="${ctx}/books/del/${book.id}" title="删除读者信息"><i class="fa fa-remove fa-fw"></i></a>
 				</td>
 			</tr>
 			</c:forEach>

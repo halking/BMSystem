@@ -10,7 +10,7 @@ public interface CrudDao<T> extends IBaseHibernateDAO{
       * @param entity
       * @return
       */
-     public T get(T entity);
+     public T get(Integer id);
      /**
       * 得到实体ID
       * @param id

@@ -5,6 +5,7 @@ package com.hal.bms.services;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.hal.bms.commons.services.CrudServices;
@@ -20,7 +21,9 @@ import com.hal.bms.entity.Type;
  */
 @Service
 public class BooksServices extends CrudServices<BooksDao, Books>  implements IbaseServices<Books,Type>{
-
+   
+   
+   
 	/* 
 	 *2016年4月6日
 	 * @see com.hal.bms.commons.services.BaseServices#queryByPage(java.lang.Object, java.lang.Object)
@@ -48,5 +51,9 @@ public class BooksServices extends CrudServices<BooksDao, Books>  implements Iba
 		List<Books>  list = dao.queryBytype(type);
 		return list;
 	}
-     
+    public void  updateRest(Books books){
+    	int rest = books.getRest();
+    	books.setRest(--rest);
+    	dao.updateEntity(books);
+    } 
 }

@@ -24,7 +24,7 @@ public class TypeDao extends BaseHibernateDAO<Type> {
 	 *@return
 	 */
 	@Override
-	public Type get(Type entity) {
+	public Type get(Integer id) {
 		// TODO Auto-generated method stub
 		
 		return null;

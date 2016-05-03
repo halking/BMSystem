@@ -401,3 +401,52 @@ p {
 	height: 900px;
 	border: none;
 }
+.foot{
+	width: 100%;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	margin-top: 0px;
+}
+.blogroll{
+	width: inherit;
+	height: 40px;
+	background-color: #474747;
+	line-height: 40px;
+}
+.links{
+	width: inherit;
+	margin-left: 100px;
+	height: 40px;
+	list-style: none;
+}
+.links li{
+	width: 200px;
+	height: inherit;
+	float: left;
+	margin-right: 30px;
+	color: #FFFFFF;
+}
+.links li a{
+	color: red;
+	text-decoration: none;
+}
+.links li a:hover{
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.ft{
+	width: inherit;
+	height: 80px;
+	/*line-height: 200px;*/
+	border-top: 3px solid red;
+}
+.ft .te{
+	width: inherit;
+	height: 60px;
+	margin-top: 20px;
+	text-align: center;
+	color: #000000;
+}
+.te span{
+	margin-top: 20px;
+}

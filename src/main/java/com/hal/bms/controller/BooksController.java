@@ -19,14 +19,7 @@ import com.hal.bms.entity.Books;
 import com.hal.bms.entity.Type;
 import com.hal.bms.services.BooksServices;
 
-/**
- * @author hal
- *
- */
-/**
- * @author hal
- *
- */
+
 /**
  * @author hal
  *
@@ -39,7 +32,6 @@ public class BooksController extends BaseController {
 	private BooksServices booksServices;
 
 	public Page page = new Page();
-	String msg="";
 
 	/**
 	 * 查询所有图书 2016年4月6日
@@ -109,9 +101,11 @@ public class BooksController extends BaseController {
 	public String findByname(Books books, Model model) {
 	      String name = StringUtil.toCoding(books.getBookname());
 		   List<Books> list = booksServices.findByName(name);
-		   if (list==null) {
+		   if (list == null || list.isEmpty()) {
 			  msg="抱歉，你查询的图书不存在！其他书籍同样精彩，去看看吧！";
-			  model.addAttribute("msg", msg);
+			  System.out.println(msg);
+			  errors.add(msg);
+			  model.addAttribute("errors", errors);
 			  return "web/books";
 		   }
 			model.addAttribute("book", list);
@@ -152,8 +146,8 @@ public class BooksController extends BaseController {
 	 * 
 	 * @param id
 	 */
-	@RequestMapping(value = "del")
-	public String delete(@PathVariable("id")Integer id) {
+	@RequestMapping(value = "del/{id}")
+	public String delete(@PathVariable Integer id) {
 		booksServices.deleteById(id);
 		return "redirect:/books/booklist";
 	}
@@ -167,7 +161,6 @@ public class BooksController extends BaseController {
 	@RequestMapping(value = "update", method = RequestMethod.POST)
 	public String updateBooks(Books books) {
 		int id = books.getId();
-		System.out.println("id"+id);
 		booksServices.updateById(books.getId(), books);
 		return "redirect:/books/booklist";
 	}

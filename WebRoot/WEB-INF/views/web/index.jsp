@@ -34,13 +34,14 @@
 			<div class="top-r">
 				<div class="top-login">
 				<c:if test="${user.username==null}">
-					<span><a href="${ctx}/a/login">登录 </a> 
+					<span><a href="${ctx}/all/login">登录 </a> 
 				</c:if> 
-				<c:if test="${users.username!=null }">
+				<c:if test="${not empty user.username}">
                    <span>欢迎<strong style="color: #009ad6;">&nbsp;&nbsp;${user.username}</strong></span> 
-                   <span style="margin-left: 10px;"><a  href="${ctx}/exit">退出</a></span>
+                   <span><a href="${ctx}/user/self">个人信息</a></span>
+                   <span style="margin-left: 10px;"><a  href="${ctx}/user/exit">退出</a></span>
                 </c:if>
-					|</span> <span><a href="">注册</a></span>
+					|</span> <span><a href="${ctx}/all/reg">注册</a></span>
 				</div>
 			</div>
 		</div>
@@ -49,7 +50,7 @@
 			<!-- <div class="r rb"></div> -->
 			<div class="sframe">
 				<span class="ac addicon"><i class="fa fa-book fa-fw"></i></span> 
-				<form action="books/findname" method="get" target="ifmain">
+				<form action="${ctx}/books/findname" method="get" target="ifmain">
 				<input type="text" name="bookname" id="bn" value="" placeholder="请输入你想寻找的书籍 "/> 
 				<span class="ac adds"><input type="submit"  class="sb" value="查询"></span></a>
 				</form>
@@ -135,7 +136,23 @@
 			<iframe class="ifmain"  name="ifmain"  id="ifmain" src="${ctx}/books/book" >
 			</iframe>
 	</div>
-   <div class="foot"></div>
+    <div class="foot">
+			<div id="blogroll" class="blogroll">
+				<ul class="links">
+					<li>友情链接：</li>
+					<li><a href="http://www.chinaedu.org.cn/dingbit/qdlgdxqdxy/index.html">青岛理工大学琴岛学院</a></li>
+					<li><a href="http://tieba.baidu.com/f?kw=%C7%E0%B5%BA%C0%ED%B9%A4%B4%F3%D1%A7%C7%D9%B5%BA%D1%A7%D4%BA&fr=ala0&tpl=5">琴岛学院百度贴吧</a></li>
+					<li><a href="http://zsjy.qdc.edu.cn/zsjy/index.php/zs/zs">琴岛学院招生办</a></li>
+					<li><a href="http://library.qdc.edu.cn/">琴岛学院图书馆</a></li>
+				</ul>
+			</div>
+			<div id="" class="ft">
+				<div class="te">
+				  <span>地址：青岛市城阳区铁骑山路79号</span><br />
+				  <span>©copyRight 软件工程12-1 hal</span>
+				</div>
+			</div>
+		</div>
 </body>
 <script type="text/javascript">
 	//	console.log($(window).width());

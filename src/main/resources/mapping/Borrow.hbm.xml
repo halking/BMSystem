@@ -19,16 +19,16 @@
         <property name="remark" type="java.lang.String">
             <column name="remark" length="200" />
         </property>
-        <property name="borrowdate" type="java.sql.Timestamp">
+        <property name="borrowdate" type="java.util.Date">
             <column name="borrowdate" length="19" />
         </property>
-        <property name="returndate" type="java.sql.Timestamp">
+        <property name="returndate" type="java.util.Date">
             <column name="returndate" length="19" />
         </property>
-        <property name="mustdate" type="java.sql.Timestamp">
+        <property name="mustdate" type="java.util.Date">
             <column name="mustdate" length="19" />
         </property>
-        <property name="payfine" type="java.math.BigDecimal">
+        <property name="payfine" type="java.lang.Double">
             <column name="payfine" precision="20" scale="0" />
         </property>
         <set name="historyborrows" inverse="true">

@@ -27,8 +27,8 @@ public abstract class CrudServices<D extends BaseHibernateDAO<T>, T extends Data
 	 * @param entity
 	 * @return
 	 */
-	public   T get(T entity) {
-		return dao.get(entity);
+	public   T get(Integer id) {
+		return dao.get(id);
 	}
 
 	/**
